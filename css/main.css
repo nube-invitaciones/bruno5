@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #02132D;
+    color: #ffffff;
+
+}
+
+/* Titulo principal */
+h1 {
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+/* Subtitulos y botones */
+h2, .btn-primary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Cuerpos de texto */
+p, body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+section {
+    height: 100vh;
+    text-align: center;
+}
+
+#intro {
+    img {
+        width: 100%;
+    }
+}
