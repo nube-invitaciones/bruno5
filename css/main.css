@@ -1,3 +1,10 @@
+/* 1. Variables Globales */
+:root {
+  --color-primario: #0076DF;
+  --color-primario-hover: #005bb5;
+  --color-texto: #ffffff;
+  --fondo-cristal: rgba(2, 19, 45, 0.8);
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +19,12 @@ body {
 
 /* Cuerpos de texto */
 p, body {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
-section {
+#intro {
     height: 100vh;
     text-align: center;
 }
@@ -32,24 +39,51 @@ section {
 h1 {
     font-family: 'Alex Brush', cursive;
     font-weight: 400;
-    font-size: 5rem;
+    font-size: 8rem;
+}
+
+#name {
+    margin-top: -22%;
 }
 
 /* Subtitulos */
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: normal;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-/* 1. Variables Globales (Facilita el mantenimiento futuro) */
-:root {
-  --color-primario: #0076DF;
-  --color-primario-hover: #005bb5;
-  --color-texto: #ffffff;
-  --fondo-cristal: rgba(2, 19, 45, 0.8);
+#years {
+    margin-top: -14%;
+    margin-bottom: 8%;
 }
+
+audio {
+    margin-bottom: 16%;
+}
+
+a {
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+/* Scroll Down */
+@keyframes flotar-scroll {
+  0%, 100% {
+    transform: translateY(0); /* Posición original */
+  }
+  50% {
+    transform: translateY(12px); /* Baja 12 píxeles a la mitad de la animación */
+  }
+}
+#chevron {
+    /* Llama a la animación "flotar-scroll", dura 2 segundos, se repite infinito, y tiene un ritmo suave */
+    animation: flotar-scroll 2s ease-in-out infinite;
+    font-size: 2rem;
+}
+
 
 /* 2. Clases de Utilidad */
 .hidden { display: none !important; }
