@@ -22,7 +22,13 @@ body {
 p, body {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
+    font-weight: lighter;
     line-height: 1.6;
+}
+
+#fantasy {
+    font-weight: normal;
+    margin-bottom: 2%;
 }
 
 #intro {
@@ -67,6 +73,21 @@ a {
     text-decoration: none;
 }
 
+#place {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+
+#map {
+    img{
+        width: 100%;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    margin-bottom: 1.5rem;
+}
+
 /* Scroll Down */
 @keyframes flotar-scroll {
   0%, 100% {
@@ -90,7 +111,7 @@ section {
     background: var(--fondo-section);
     padding: 1.5rem;
     border-radius: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
