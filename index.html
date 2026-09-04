@@ -19,7 +19,7 @@
     <!-- Intro Section-->
     <div id="intro">
         <img src="images/background-mj.png" alt="Moonwalk">
-        <h1 id="name" data-aos="zoom-in">Bruno</h1>
+        <h1 id="name" data-aos="zoom-in" data-aos-duration="2000">Bruno</h1>
         <h2 id="years">Cumple 5 años </h2>
         <audio controls loop src="audio/Beat It Remix 1.mp3"></audio>
         <a href="#welcome">
@@ -29,25 +29,31 @@
     </div>
     <!-- Container Section-->
      <div class="container">
-         <section id="welcome" data-aos="fade-up" data-aos-duration="3000">
+         <section id="welcome" data-aos="zoom-in" data-aos-duration="2000">
              <h2>¡Hee-hee!</h2>
              <p>Queremos invitarte a cantar, bailar y divertirte con nosotros</p>
          </section>
          
-         <section id="date" data-aos="fade-up" data-aos-duration="3000">
+         <section id="date" data-aos="zoom-in" data-aos-duration="2000">
              <h2>¿Cuándo?</h2>
-             <p>Domingo 20 de Septiembre</p>
-             <p>De 12:00 pm a 5:00 pm</p>
+             <p>El domingo 20 de Septiembre, de 12:00 pm a 5:00 pm</p>
          </section>
      
-         <section id="place" data-aos="fade-up" data-aos-duration="3000">
-             <h2>¿Cómo llegar?</h2>
-             <p>Fantasy Kingdom</p>
-             <p>Calle Rotterdam s/n, Col Centro Urbano, 54750 <br> Cuautitlán Izcalli, Edo. Méx., México</p>
-             <a href="">Abrir en Google Maps</a>
-         </section>
+         <div data-aos="zoom-in" data-aos-duration="2000">
+            <section id="place">
+                 <h2>¿Cómo llegar?</h2>
+                 <p id="fantasy">Fantasy Kingdom</p>
+                 <p>Calle Rotterdam s/n, Col Centro Urbano, 54750, Cuautitlán Izcalli, Edo. Méx.</p>
+            </section>
+                
+            <div id="map">
+                 <a href="https://www.google.com/maps/place/Fantasy+kingdom/@19.6544568,-99.2111878,17.02z/data=!4m6!3m5!1s0x85d21f20c6271117:0xa0335fc11f4c84e7!8m2!3d19.6544322!4d-99.208435!16s%2Fg%2F11h0ryxbz9?entry=ttu&g_ep=EgoyMDI2MDkwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="images/map.JPG" alt="Mapa">
+                </a>
+            </div>
+         </div>
      
-         <section id="confirmation" data-aos="fade-up" data-aos-duration="3000">
+         <section id="confirmation">
              <p>Por favor ayudanos a confirmar si podrás acompañarnos</p>
              <!-- Botón principal para abrir el modal -->
              <button id="btnModalOpen" class="btn-primary">Confirmar Asistencia</button>
