@@ -1,6 +1,5 @@
 // Google Apps Script URL
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwwK-GjNAWH-OdaKOhin5KNGrL8q5fRkxR8nj7xonqxIoIvXzQQOIxfKdQyOPo7fjCxkw/exec';
-
 const btnClose = document.getElementById('btnClose');
 const btnEnviar = document.getElementById('btnEnviar');
 const btnModalOpen = document.getElementById('btnModalOpen');
@@ -15,6 +14,7 @@ btnClose.onclick = () => modal.classList.add('hidden');
 
 radiosAsistencia.forEach(radio => {
 radio.addEventListener('change', (e) => {
+    errorAsistencia.classList.add('hidden');
     if (e.target.value === 'Si') {
     campoPersonas.classList.remove('hidden');
     } else {
@@ -26,6 +26,10 @@ radio.addEventListener('change', (e) => {
 // Manejo del envío del formulario
 form.addEventListener('submit', (e) => {
 e.preventDefault();
+
+if (!window.validarFormulario()) {
+        return; 
+    }
 
 btnEnviar.disabled = true;
 btnEnviar.innerText = "Enviando...";
@@ -52,9 +56,9 @@ fetch(SCRIPT_URL, {
 
     const textoAgradecimiento = document.getElementById('textoAgradecimiento');
     if (data.asistencia === 'Si') {
-    textoAgradecimiento.innerText = `¡Gracias ${data.nombre}! Tu asistencia ha sido confirmada.`;
+    textoAgradecimiento.innerHTML = `<p>Gracias ${data.nombre}<br>Tu asistencia ha sido confirmada.</p><br><h2>¡Te esperamos!</h2>`;
     } else {
-    textoAgradecimiento.innerText = `¡Muchas gracias por avisarnos, ${data.nombre}! Lamentamos que no nos puedas acompañar.`;
+    textoAgradecimiento.innerHTML = `<h2>Gracias por avisarnos</h2><br><p>Lamentamos que no puedas acompañarnos, ${data.nombre}.</p>`;
     }
 })
 .catch(error => {
